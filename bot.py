@@ -6,7 +6,7 @@ import psutil
 import json
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton , ReplyKeyboardMarkup , KeyboardButton
 import logging
-bot = telebot.TeleBot("5349720426:AAHcuwBWX9zUZzW2ZBNZjCiIZWMz3AZNHVM", parse_mode=None) # You can set parse_mode by default. HTML or MARKDOWN
+bot = telebot.TeleBot("your-bot-token", parse_mode=None) # You can set parse_mode by default. HTML or MARKDOWN
 # @bot.message_handler(commands=['start', 'help'])
 # def send_welcome(message):
 #     bot.reply_to(message, "Howdy, how are you doing?")
