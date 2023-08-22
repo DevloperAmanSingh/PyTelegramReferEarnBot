@@ -13,13 +13,13 @@ import string
 import pandas as pd
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton , ReplyKeyboardMarkup , KeyboardButton
 import logging
-bot = telebot.TeleBot("5349720426:AAHcuwBWX9zUZzW2ZBNZjCiIZWMz3AZNHVM", parse_mode=None) # You can set parse_mode by default. HTML or MARKDOWN
-myclient = pymongo.MongoClient("mongodb+srv://aman:S3MqZLiEy2ee5SPl@cluster0.bqqkj.mongodb.net/")
+bot = telebot.TeleBot("tg bot token", parse_mode=None) # You can set parse_mode by default. HTML or MARKDOWN
+myclient = pymongo.MongoClient("mongodb+srv://<mongousername>:<mongopasss>@cluster0.bqqkj.mongodb.net/")
 mydb = myclient["pydb"]
 mycol = mydb["userinfo"]
 
 def verifyMembership(msg):
-    status = bot.get_chat_member('@pytelegramtestgroup',msg.from_user.id)
+    status = bot.get_chat_member('@channelname',msg.from_user.id)
     if status.status in ['creator','administrator','member']:
         return True
     else:
